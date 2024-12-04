@@ -31,6 +31,10 @@ const LoginPage = () => {
       if (status === 200 && errorCode === 0) {
         console.log("Login successful:", data);
         // You can handle successful login logic here, such as redirecting to another page
+      } else if (errorCode === 1) {
+        setError("غير مصرح. يرجى التحقق من بيانات الدخول.");
+      } else if (status === 404) {
+        setError("غير موجود.");
       } else {
         // If there's an error code, display the error message
         setError("حدث خطأ غير معروف");
