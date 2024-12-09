@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -99,19 +100,12 @@ const LoginPage = () => {
           تسجيل الدخول
         </button>
       </form>
-      <p style={{ marginTop: "20px" }}>
-        ليس لديك اشتراك؟{" "}
-        <a
-          href="/register"
-          style={{
-            color: "#007bff",
-            textDecoration: "none",
-            cursor: "pointer",
-          }}
-        >
-          اشترك
-        </a>
-      </p>
+
+      <div>
+        <p>
+          ليس لديك اشتراك؟ <Link to="/register">اشترك</Link>
+        </p>
+      </div>
     </div>
   );
 };
