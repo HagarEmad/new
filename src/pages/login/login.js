@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom"; // Import useHistory
 
 const LoginPage = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const history = useHistory(); // Initialize history
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +32,8 @@ const LoginPage = () => {
       // Check if the status code is 200 and there is no errorCode (indicating a successful login)
       if (status === 200 && errorCode === 0) {
         console.log("Login successful:", data);
-        // You can handle successful login logic here, such as redirecting to another page
+        // Redirect to a new route (for example, the dashboard or home page)
+        history.push("/navbar"); // Adjust the path to wherever you want to redirect
       } else if (errorCode === 1) {
         setError("غير مصرح. يرجى التحقق من بيانات الدخول.");
       } else if (status === 404) {
@@ -40,7 +42,6 @@ const LoginPage = () => {
         // If there's an error code, display the error message
         setError("حدث خطأ غير معروف");
         console.log(response);
-
         console.log("Login failed:", errorMessage);
       }
     } catch (err) {

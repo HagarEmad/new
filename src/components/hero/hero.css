@@ -1,0 +1,79 @@
+
+
+.hero-content h1 {
+  color: white;
+  font-size: 4em;
+  /* font-weight: 10%; */
+}
+.hero-container {
+  position: relative;
+
+
+  height:80vh; 
+  overflow: hidden; /* Prevents overflow */
+
+}
+@media (max-width: 1000px) {
+  .hero-container {
+    height: 60vh;
+  }
+}
+
+/* .hero{
+ 
+} */
+
+.first_text{
+  margin-bottom: 1%;
+}
+.second-text{
+  color:#ffff00 !important;
+}
+.hero p{
+  color: white;
+  margin-top: 3%;
+  font-size: 16px !important;
+  /* padding-right: 20%; */
+  margin-bottom: 12%;
+  line-height: 2em;
+  margin-top: 10%;
+}
+ /* Navbar button styles */
+ 
+ .hero .two {
+  color: #1b4d99 ;
+  box-shadow: 0 0 40px 40px #ffff00 inset, 0 0 0 0 #ffff00 !important;
+  transition: all 150ms ease-in-out;
+  border-radius: 25px;
+  padding: 10px 30px;
+  outline: none;
+  border: 1px solid  #ffff00 !important;
+  ;
+}
+
+.two:hover {
+  box-shadow: 0 0 10px 0 #ffff00 inset, 0 0 10px 4px #ffff00 !important;
+  color: #ffff00 !important; 
+  /* //1b4d99 */
+}
+
+
+/* Offcanvas styles */
+.offcanvas-end {
+  background-color: #f8f9fa;
+  width: 250px;
+}
+
+.hero .offcanvas-body {
+  padding: 2rem;
+}
+
+#hero-image {
+  width: 100% !important
+  ; /* Makes the image take full width */
+  max-width: 600px !important; 
+  height: auto !important; /* Maintain aspect ratio */
+  /* object-fit: contain; Ensures image scales proportionally */
+  display: block;
+  margin: 0 auto;
+}
