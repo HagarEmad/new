@@ -27,7 +27,7 @@ const Hero = () => {
 
    
       </div>
-      <div className="col">
+      <div className="col  img_vector">
         <img id="hero-image" src={bookImage} className="img" alt="logo"/>
         
 

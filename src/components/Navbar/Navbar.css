@@ -12,6 +12,7 @@
 
 }
 
+
 .logeen{
   /* color: #fcf9f9; */
   letter-spacing: 6px;
@@ -85,6 +86,28 @@
     color: black;
     background-color: black;
     height: 42px;
+  }
+
+  @media (max-width: 992px) {
+    svg {
+      width: 40px ; /* Smaller width */
+      height: 28px; /* Smaller height */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    svg {
+      width: 30px; /* Even smaller width for very small screens */
+      height: 21px; /* Corresponding height */
+
+    }
+    .logeen{
+      /* color: #fcf9f9; */
+      letter-spacing: 1px;
+    }
+    .navbar-nav img{
+      width: 40%  !important;
+    } 
   }
   
   #top-line,

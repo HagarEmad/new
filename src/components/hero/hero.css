@@ -19,6 +19,23 @@
   }
 }
 
+@media (max-width: 590px) {
+  .img_vector {
+    display: none !important;
+  }
+  .hero-container {
+    height: 66vh;
+}
+ 
+}
+@media (max-width: 1000px) {
+  
+  .hero-content h1 {
+  
+    font-size: 2.5em;
+  }
+}
+
 /* .hero{
  
 } */

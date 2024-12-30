@@ -56,14 +56,36 @@ html {
     .box-item {
       width: 45%; /* Two items per row */
     }
+  
   }
   
   @media screen and (min-width: 768px) {
     .box-item {
       width: 30%; /* Three items per row for medium+ screens */
     }
+    .flip-box-back {
+    
+      min-height: 350px !important;
+    }
+    .flip-box-front {
+      min-height: 350px !important;
+
+    }
   }
+  @media screen and (max-width: 500px) {
+    
+    .flip-box-back {
+    
+      min-height: 290px !important;
+    }
+    .flip-box-front {
+      min-height: 290px !important;
+
+    }
+    .containerr h1{
   
+      font-size: 3em;}
+  }
   @media screen and (min-width: 1380px) {
     .box-item {
       width: 22%; /* Four items per row for large screens */

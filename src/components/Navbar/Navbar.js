@@ -24,7 +24,7 @@ function ArabicNavbar() {
     >
       <div className="container-fluid">
         <div className="collapse navbar-collapse d-flex" id="navbarExample01">
-          <div className="navbar-nav me-auto mb-2 mb-lg-0 w-25 d-flex align-items-center p-3">
+          <div className="navbar-nav me-auto mb-xxl-2  mb-sm-0 mb-lg-0 w-25 d-flex  flex-row align-items-center p-xxl-3  p-md-3">
             <img
               src="/images/photo_6008331511490790566_x.jpg"
               alt="An abstract design"
@@ -39,8 +39,9 @@ function ArabicNavbar() {
                 data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"
                 id="hamburger"
-                class="Header__toggle-svg  d-flex align-items-center"
-                viewbox="0 0 60 40"
+                class="Header__toggle-svg d-flex align-items-center"
+                viewBox="0 0 60 40"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <g
                   stroke="#fff"
@@ -116,44 +117,40 @@ function ArabicNavbar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                <Link
+                  <Link
                     className="nav-link home"
                     aria-current="page"
                     to="/home"
                   >
                     Web Designing
                   </Link>
-                 
                 </li>
                 <li className="nav-item">
-                <Link
+                  <Link
                     className="nav-link home"
                     aria-current="page"
                     to="/home"
                   >
                     Mobile Apps
                   </Link>
-                 
                 </li>
                 <li className="nav-item">
-                <Link
+                  <Link
                     className="nav-link home"
                     aria-current="page"
                     to="/home"
                   >
                     Digital Marketing
                   </Link>
-                 
                 </li>
                 <li className="nav-item">
-                <Link
+                  <Link
                     className="nav-link home"
                     aria-current="page"
                     to="/home"
                   >
                     Desktop Apps
                   </Link>
-                 
                 </li>
               </ul>
               <button className="btn third">Contact Us</button>

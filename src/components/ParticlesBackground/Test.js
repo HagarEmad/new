@@ -34,28 +34,40 @@ const ParticlesBackground = () => {
   }, []);
 
   // Define particle options
-  const options = useMemo(() => ({
-    fullScreen: { enable: true },
-    background: { color: { value: "#0d47a1" } },
-    fpsLimit: 120,
-    interactivity: {
-      events: {
-        onClick: { enable: true, mode: "push" },
-        onHover: { enable: true, mode: "repulse" },
+  const options = useMemo(
+    () => ({
+      fullScreen: { enable: true },
+      background: { color: { value: "#0d47a1" } },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: { enable: true, mode: "push" },
+          onHover: { enable: true, mode: "repulse" },
+        },
+        modes: {
+          push: { quantity: 4 },
+          repulse: { distance: 200, duration: 0.4 },
+        },
       },
-      modes: {
-        push: { quantity: 4 },
-        repulse: { distance: 200, duration: 0.4 },
+      particles: {
+        color: { value: "#ffffff" },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: isSmallScreen ? 2 : 6, // Slower speed for smaller screens
+        },
+        number: { value: isSmallScreen ? 30 : 80 }, // Fewer particles on small screens
       },
-    },
-    particles: {
-      color: { value: "#ffffff" },
-      links: { color: "#ffffff", distance: 150, enable: true, opacity: 0.5, width: 1 },
-      move: { enable: true, speed: isSmallScreen ? 4 : 6 },  // Adjust speed based on screen size
-      number: { value: isSmallScreen ? 40 : 80 },            // Adjust number of particles based on screen size
-    },
-    detectRetina: true,
-  }), [isSmallScreen]);
+      detectRetina: true,
+    }),
+    [isSmallScreen]
+  );
 
   return (
     <div
@@ -64,7 +76,7 @@ const ParticlesBackground = () => {
         top: 0,
         left: 0,
         width: "100%",
-        height: "100vh",  // Full height of viewport
+        height: "100vh", // Full height of viewport
         zIndex: -1,
         overflow: "hidden",
       }}
@@ -77,8 +89,8 @@ const ParticlesBackground = () => {
             position: "absolute",
             top: 0,
             left: 0,
-            width: "100vw",  // Full width of viewport
-            height: "100vh",  // Full height of viewport
+            width: "100vw", // Full width of viewport
+            height: "100vh", // Full height of viewport
             zIndex: -1,
           }}
         />
