@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function ArabicNavbar() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -75,29 +75,29 @@ function ArabicNavbar() {
                 <div className="offcanvas-body">
                   <ul className="navbar-nav">
                     <li className="nav-item active">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" to="/home">
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" to="/home">
                         Web Designing
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" to="/home">
                         Mobile Apps
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" to="/home">
                         Digital Marketing
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <Link className="nav-link" to="/home">
                         Desktop Apps
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -107,29 +107,53 @@ function ArabicNavbar() {
             <div className="d-flex justify-content-between w-75">
               <ul className="navbar-nav mb-2 mb-lg-0 d-flex align-items-center items gap-4">
                 <li className="nav-item active">
-                  <a className="nav-link home" aria-current="page" href="#">
+                  <Link
+                    className="nav-link home"
+                    aria-current="page"
+                    to="/home"
+                  >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                <Link
+                    className="nav-link home"
+                    aria-current="page"
+                    to="/home"
+                  >
                     Web Designing
-                  </a>
+                  </Link>
+                 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                <Link
+                    className="nav-link home"
+                    aria-current="page"
+                    to="/home"
+                  >
                     Mobile Apps
-                  </a>
+                  </Link>
+                 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                <Link
+                    className="nav-link home"
+                    aria-current="page"
+                    to="/home"
+                  >
                     Digital Marketing
-                  </a>
+                  </Link>
+                 
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                <Link
+                    className="nav-link home"
+                    aria-current="page"
+                    to="/home"
+                  >
                     Desktop Apps
-                  </a>
+                  </Link>
+                 
                 </li>
               </ul>
               <button className="btn third">Contact Us</button>
