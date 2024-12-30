@@ -1,0 +1,15 @@
+/* Inside your CSS file */
+@media (max-width: 768px) {
+    .particles-background {
+      width: 100%;
+      height: 100vh;  /* Adjust height if needed */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .particles-background {
+      width: 100%;
+      height: 100vh;  /* Adjust for larger screens */
+    }
+  }
+  
